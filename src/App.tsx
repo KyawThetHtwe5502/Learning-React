@@ -1,23 +1,26 @@
 
+// import Counter from "./components/Counter"
 import CreateTask from "./components/CreateTask"
 import Heading from "./components/Heading"
 import TaskList from "./components/TaskList"
-import TaskProvider from "./context/TaskProvider"
+// import TaskProvider from "./context/TaskProvider"
 
 
 function App() {
  
  
   return (
-    <TaskProvider>
+    // <TaskProvider>
         <div className="p-10">
           
           <Heading/>
           <CreateTask />
           <TaskList />
           </div>
-    </TaskProvider>
-      
+    // </TaskProvider>
+      // <div>
+      //   <Counter/>
+      // </div>
     
   )
 }

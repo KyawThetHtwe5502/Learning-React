@@ -1,6 +1,7 @@
 import { ReactElement } from "react"
-import { useTaskContext } from "../hook/useTaskContext";
+// import { useTaskContext } from "../hook/useTaskContext";
 import { TasksType } from "../context/taskContext";
+import useTodoStore from "../store/useTodoStore";
 
 
 type TaskProps = {
@@ -8,7 +9,7 @@ type TaskProps = {
     task: TasksType;
 }
 const Task = ({task}: TaskProps): ReactElement => {
-    const {doneTask, removeTask} = useTaskContext()
+    const {doneTask, removeTask} = useTodoStore()
     const handleChecked = () => {
       doneTask(task.id)
     }

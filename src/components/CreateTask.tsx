@@ -1,10 +1,11 @@
 import { ChangeEvent,    useState } from "react"
-import { useTaskContext } from "../hook/useTaskContext";
+// import { useTaskContext } from "../hook/useTaskContext";
 import { TasksType } from "../context/taskContext";
+import useTodoStore from "../store/useTodoStore";
 
 
 const CreateTask = () => {
-  const  {addTask } = useTaskContext()
+  const  {addTask } = useTodoStore()
   
   const [job,setJob] = useState<string>("")
   const newTask: TasksType = {
